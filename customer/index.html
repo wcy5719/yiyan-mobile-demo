@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#eef4ff" />
+    <title>医妍日记</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" id="appShell">
+      <header class="mini-header">
+        <span class="mini-header__back" id="backButton" aria-hidden="true">‹</span>
+        <strong class="mini-header__title" id="pageTitle">医妍日记</strong>
+        <span class="wechat-capsule" aria-hidden="true"><b>•••</b><i></i></span>
+      </header>
+
+      <div class="page-stack" id="pageStack">
+        <section class="page is-active" data-page="home">
+          <div class="home-intro">
+            <strong>医妍日记</strong>
+            <button type="button" data-go="category">探索系列 <span>→</span></button>
+          </div>
+          <img
+            class="home-hero-image"
+            src="./assets/home-collagen-creator.jpg"
+            alt="医妍日记数据化胶原修护开创者"
+          />
+
+          <section class="quick-actions card-overlap">
+            <button type="button" data-go="category">
+              <span class="round-mark">护</span><b>产品系列</b><small>按需求探索</small>
+            </button>
+            <button type="button" data-go="category">
+              <span class="round-mark">新</span><b>当季新品</b><small>发现新灵感</small>
+            </button>
+            <button type="button" data-open-view="guide">
+              <span class="round-mark">问</span><b>护理指南</b><small>了解使用方式</small>
+            </button>
+            <button type="button" data-open-view="brand">
+              <span class="round-mark">妍</span><b>关于品牌</b><small>认识医妍日记</small>
+            </button>
+          </section>
+
+          <button class="lab-note" type="button" data-open-view="guide">
+            <span><small>YIYANRIJI LAB NOTE</small><b>以专业精研 回应肌肤所需</b></span>
+            <i>↗</i>
+          </button>
+
+          <section class="content-section">
+            <div class="section-heading">
+              <div><h2>本期推荐</h2><p>精选日常护理单品</p></div>
+              <button type="button" data-go="category">查看全部</button>
+            </div>
+            <article class="featured-product" data-open-product>
+              <img src="./assets/category-repair-banner.jpg" alt="医妍日记蛋白修护精华" />
+              <div>
+                <small>精华护理系列</small>
+                <h3>医妍日记蛋白修护精华</h3>
+                <p>聚焦日常修护，帮助肌肤维持舒适状态</p>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" data-page="category">
+          <nav class="category-tabs">
+            <button type="button" data-category-tab="home">家居产品</button>
+            <button class="is-active" type="button" data-category-tab="skin">皮肤护理</button>
+          </nav>
+
+          <div class="category-layout" id="skinCategory">
+            <aside>
+              <button class="is-active" type="button">医妍日记<br />蛋白修护精华</button>
+            </aside>
+            <div class="category-cards">
+              <article class="category-card" data-open-product>
+                <img src="./assets/category-repair-banner.jpg" alt="医妍日记蛋白修护精华" />
+                <div><span><b>医妍日记蛋白修护精华</b><small>精华护理系列</small></span><i>→</i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="empty-category" id="homeCategory" hidden>
+            <span>居</span><h2>家居产品</h2><p>产品分类整理中</p>
+          </div>
+        </section>
+
+        <section class="page cart-page" data-page="cart">
+          <section class="cart-heading">
+            <h1>我的购物车</h1><p id="cartCount">已选 0 件商品</p>
+          </section>
+
+          <section class="empty-cart" id="emptyCart">
+            <div class="cart-outline" aria-hidden="true"><span></span><i></i><b></b></div>
+            <h2>购物车还是空的</h2>
+            <p>慢慢挑选适合你的日常护理</p>
+            <button type="button" data-go="category">去逛逛</button>
+          </section>
+
+          <section class="cart-items" id="cartItems" hidden></section>
+
+          <section class="content-section recommend">
+            <div class="section-heading"><div><h2>猜你喜欢</h2><p>一些值得了解的单品</p></div></div>
+            <div class="recommend-grid">
+              <article class="recommend-card">
+                <img src="./assets/category-repair-banner.jpg" alt="医妍日记蛋白修护精华" />
+                <h3>医妍日记蛋白修护精华</h3>
+                <div><b>¥xxx</b><button type="button" data-add-product>＋</button></div>
+              </article>
+              <article class="recommend-card">
+                <img src="./assets/category-repair-bottles.jpg" alt="医妍日记蛋白修护精华" />
+                <h3>医妍日记蛋白修护精华</h3>
+                <div><b>¥xxx</b><button type="button" data-add-product>＋</button></div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="page mine-page" data-page="mine">
+          <section class="profile-hero">
+            <strong class="profile-brand">医妍日记</strong>
+            <div class="profile-row">
+              <span class="profile-avatar">医妍</span>
+              <div><h2>微信用户</h2><button type="button" data-open-bind>去绑定 ›</button></div>
+              <button class="edit-profile" type="button" data-toast="个人资料编辑">✎</button>
+            </div>
+          </section>
+
+          <button class="member-benefit" type="button" data-toast="会员权益">
+            <span><small>MEMBERSHIP</small><b>会员权益</b></span><i>→</i>
+          </button>
+
+          <section class="asset-card">
+            <div><b>0</b><span>优惠券</span><small>可用优惠</small></div>
+            <div><b>0</b><span>积分</span><small>日常积累</small></div>
+          </section>
+
+          <section class="mine-card">
+            <div class="mine-card__heading"><h2>订单与售后</h2><button type="button" data-go="cart">查看购物车 →</button></div>
+            <div class="order-grid">
+              <button type="button" data-toast="我的订单"><span>▣</span><b>我的订单</b><small>查看购买记录</small></button>
+              <button type="button" data-toast="售后服务"><span>↻</span><b>售后服务</b><small>退换与咨询</small></button>
+            </div>
+          </section>
+
+          <section class="mine-card">
+            <div class="mine-card__heading"><h2>常用功能</h2></div>
+            <div class="utility-grid">
+              <button type="button" data-toast="护理卡"><span>▤</span><b>护理卡</b></button>
+              <button type="button" data-toast="商品收藏"><span>♡</span><b>商品收藏</b></button>
+              <button type="button" data-toast="兑换优惠券"><span>券</span><b>兑换优惠券</b></button>
+              <button type="button" data-toast="兑换记录"><span>↺</span><b>兑换记录</b></button>
+              <button type="button" data-toast="我的申诉"><span>◫</span><b>我的申诉</b></button>
+              <button type="button" data-open-agreements><span>约</span><b>我的协议</b></button>
+            </div>
+          </section>
+        </section>
+
+        <section class="page detail-page" data-page="product">
+          <img class="detail-hero" src="./assets/category-repair-banner.jpg" alt="医妍日记蛋白修护精华" />
+          <section class="detail-copy">
+            <small>精华护理系列</small>
+            <h1>医妍日记蛋白修护精华</h1>
+            <p>专注日常精华护理，带来清透、舒适的使用感受。</p>
+            <div class="detail-facts"><span>规格 5ml × 3瓶</span><span>早晚均可使用</span></div>
+          </section>
+          <section class="detail-sections">
+            <article><b>01</b><div><h3>精华亮点</h3><p>以简洁护理思路回应肌肤所需，适合融入日常护理流程。</p></div></article>
+            <article><b>02</b><div><h3>使用方法</h3><p>洁面后取适量轻柔涂抹，随后完成保湿护理。</p></div></article>
+            <article><b>03</b><div><h3>护理建议</h3><p>根据当日肤感调整用量，持续关注肌肤舒适状态。</p></div></article>
+          </section>
+          <div class="detail-footer">
+            <button type="button" data-toast="品牌客服">客服</button>
+            <button type="button" data-add-product>加入购物车</button>
+            <button class="primary" type="button" data-buy-now>立即购买</button>
+          </div>
+        </section>
+
+        <section class="page sub-page" data-page="brand">
+          <section class="sub-hero">
+            <small>YIYANRIJI LAB NOTE</small>
+            <h1>把每日护理<br />写成肌肤的温柔日记</h1>
+            <p>医妍日记陪你建立清晰、舒适的日常护理节奏。</p>
+          </section>
+          <nav class="sub-tabs">
+            <button class="is-active" type="button" data-view-tab="guide">护理指南</button>
+            <button type="button" data-view-tab="brand">品牌故事</button>
+          </nav>
+          <section class="sub-content" id="guideView">
+            <small>DAILY ROUTINE</small><h2>简洁而完整的护理三步</h2>
+            <article><b>01</b><div><h3>温和清洁</h3><p>以舒适肤感为先，避免反复摩擦肌肤。</p></div></article>
+            <article><b>02</b><div><h3>精华护理</h3><p>取适量精华轻柔涂抹，关注肌肤当下感受。</p></div></article>
+            <article><b>03</b><div><h3>锁水防护</h3><p>搭配乳霜完成日常护理，白天注意防晒。</p></div></article>
+          </section>
+          <section class="sub-content" id="brandView" hidden>
+            <small>OUR APPROACH</small><h2>以专业精研 回应肌肤所需</h2>
+            <p>医妍日记关注日常舒适体验。我们相信，好的护理来自清晰的信息、适合自己的产品，以及能够长期坚持的简单习惯。</p>
+          </section>
+        </section>
+
+        <section class="page sub-page agreements-page" data-page="agreements">
+          <section class="agreement-hero">
+            <small>YIYANRIJI · SERVICE</small><h1>服务协议</h1><p>清晰了解服务规则，安心开启每一次护理体验</p>
+          </section>
+          <div class="agreement-list" id="agreementList"></div>
+        </section>
+
+        <section class="page sub-page agreement-detail-page" data-page="agreement-detail">
+          <article class="agreement-article" id="agreementArticle"></article>
+          <div class="agreement-ack">
+            <span id="readState">向下阅读全部内容后可确认</span>
+            <button type="button" id="ackButton" disabled>请阅读至底部</button>
+          </div>
+        </section>
+      </div>
+
+      <nav class="tabbar" id="tabbar">
+        <button class="is-active" type="button" data-go="home">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>首页</span>
+        </button>
+        <button type="button" data-go="category">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>分类</span>
+        </button>
+        <button type="button" data-go="cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h2l2 11h10l2-8H7"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg><span>购物车</span>
+        </button>
+        <button type="button" data-go="mine">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-5 3.3-7 8-7s7.3 2 8 7"/></svg><span>我的</span>
+        </button>
+      </nav>
+    </main>
+
+    <div class="modal-backdrop" id="bindModal" hidden>
+      <section class="modal-card">
+        <button class="modal-close" type="button" data-close-modal>×</button>
+        <span class="modal-mark">绑</span>
+        <h2>绑定专属顾问</h2>
+        <p>扫描顾问二维码进入后，将自动建立顾客与美容师的服务关系。</p>
+        <div class="demo-qr" aria-hidden="true"></div>
+        <button class="modal-primary" type="button" data-confirm-bind>完成演示绑定</button>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
