@@ -1,0 +1,1 @@
+import"./modulepreload-polyfill-wMinxHhO.js";window.location.replace(`../customer/?v=profile10-assets#mine`);

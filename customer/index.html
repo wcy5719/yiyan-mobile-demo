@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#eef4ff" />
     <title>医妍日记</title>
-    <script type="module" crossorigin src="./assets/index-nQ62vCiD.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-h3wvWds0.css">
+    <script type="module" crossorigin src="./assets/index-ZaJyGjlL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CKYsIEB6.css">
   </head>
   <body>
     <main class="app-shell" id="appShell">
@@ -141,7 +141,7 @@
           <section class="mine-card">
             <div class="mine-card__heading"><h2>订单与售后</h2><button type="button" data-go="cart">查看购物车 →</button></div>
             <div class="order-grid">
-              <button type="button" data-toast="我的订单"><span>▣</span><b>我的订单</b><small>查看购买记录</small></button>
+              <button type="button" data-customer-assets="orders"><span>▣</span><b>我的订单</b><small>查看购买记录</small></button>
               <button type="button" data-toast="售后服务"><span>↻</span><b>售后服务</b><small>退换与咨询</small></button>
             </div>
           </section>
@@ -150,7 +150,7 @@
             <div class="mine-card__heading"><h2>常用功能</h2></div>
             <div class="utility-grid">
               <button type="button" data-toast="皮肤档案"><span>肤</span><b>皮肤档案</b></button>
-              <button type="button" data-toast="护理卡"><span>▤</span><b>护理卡</b></button>
+              <button type="button" data-customer-assets="cards"><span>▤</span><b>护理卡</b></button>
               <button type="button" data-toast="商品收藏"><span>♡</span><b>商品收藏</b></button>
               <button type="button" data-toast="兑换优惠券"><span>券</span><b>兑换优惠券</b></button>
               <button type="button" data-toast="兑换记录"><span>↺</span><b>兑换记录</b></button>
@@ -160,6 +160,8 @@
           </section>
         </section>
 
+        <section class="page appointments-page" data-page="cards"><div id="cardsRoot"></div></section>
+        <section class="page appointments-page" data-page="orders"><div id="ordersRoot"></div></section>
         <section class="page appointments-page" data-page="appointments"><div id="appointmentRoot"></div></section>
 
         <section class="page detail-page" data-page="product">
